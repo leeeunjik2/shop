@@ -351,6 +351,8 @@ p {
   color: var(--positive-status);
   font-size: 14px;
 }
+.cart-actions { display: inline-flex; gap: 14px; margin-left: 16px; }
+.cart-actions a { color: var(--interaction-accent); text-decoration: underline; font-size: 14px; }
 
 .form-message[data-kind="error"] {
   color: var(--transaction-emphasis);
