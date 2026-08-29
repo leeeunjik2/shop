@@ -5,10 +5,9 @@ import test from "node:test";
 
 import worker from "../src/worker.js";
 
-const migrationSql = readFileSync(
-  new URL("../migrations/0001_init.sql", import.meta.url),
-  "utf8",
-);
+const migrationSql = ["0001_init.sql", "0002_normalize_categories.sql"]
+  .map((file) => readFileSync(new URL(`../migrations/${file}`, import.meta.url), "utf8"))
+  .join("\n");
 
 class TestD1PreparedStatement {
   constructor(owner, sql, bindings = []) {
@@ -379,4 +378,16 @@ test("API validation rejects malformed bodies and missing records without changi
   const asset = await callApi(env, "/products/bag.jpg");
   assert.equal(asset.response.status, 200);
   assert.equal(asset.payload, "asset response");
+});
+
+test("schema is normalized around category foreign keys", async (t) => {
+  const env = createEnvironment();
+  t.after(() => env.DB.close());
+  const columns = env.DB.database.prepare("PRAGMA table_info(products)").all();
+  assert.ok(columns.some((c) => c.name === "category_id"));
+  assert.equal(columns.some((c) => c.name === "category"), false);
+  const fk = env.DB.database.prepare("PRAGMA foreign_key_list(products)").all();
+  assert.ok(fk.some((f) => f.table === "categories" && f.from === "category_id"));
+  const indexes = env.DB.database.prepare("PRAGMA index_list(products)").all();
+  assert.ok(indexes.some((i) => i.name === "idx_products_category_id"));
 });
