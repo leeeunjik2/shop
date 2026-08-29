@@ -1,0 +1,18 @@
+{
+  "name": "shop",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-08-29",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "shop-db",
+      "database_id": "6c9213ca-b79d-4d36-b965-4e523ee97356",
+      "migrations_dir": "migrations"
+    }
+  ]
+}
