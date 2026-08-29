@@ -35,3 +35,5 @@ export default{async fetch(r,e){const u=new URL(r.url);if(!u.pathname.startsWith
 
 const legacyApi=api;
 api=async function(r,e,u,s){const m=u.pathname.match(/^\/api\/products\/([^/]+)\/english$/);if(m){if(r.method!=="POST")throw new ApiError(405,"method_not_allowed","허용되지 않는 요청 방식입니다.",{Allow:"POST"});return english(e,pid(m[1]));}return legacyApi(r,e,u,s);};
+const rawEnglish=english;
+english=async function(env,id){const response=await rawEnglish(env,id);const data=await response.clone().json().catch(()=>null);const text=String(data?.introduction||"").replace(/\s+/g," ").trim();if(!text||/(Product name|Category|Description|Translated to English)\s*:/i.test(text)||/[가-힣]/.test(text))throw new ApiError(502,"ai_failed","영어 소개를 만들지 못했습니다.");const sentence=(text.match(/[^.!?]+[.!?]+|[^.!?]+$/)||[text])[0].trim();return json({introduction:sentence});};
