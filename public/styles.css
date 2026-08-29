@@ -190,7 +190,10 @@ p {
   display: block;
   width: 180px;
   margin: 0 auto;
+  transition: opacity 120ms ease;
 }
+
+.product-card__link:hover { opacity: .78; }
 
 .product-card__image,
 .detail-image,
@@ -325,7 +328,10 @@ p {
   color: var(--interaction-accent);
   font-size: 14px;
   font-weight: 700;
+  transition: background-color 120ms ease, color 120ms ease;
 }
+
+.outline-action:hover { background: var(--interaction-accent); color: var(--surface); }
 
 .outline-action:disabled {
   border-color: var(--control-border);
@@ -570,7 +576,10 @@ p {
   color: var(--interaction-accent);
   font-size: 18px;
   font-weight: 700;
+  transition: background-color 120ms ease, color 120ms ease;
 }
+
+.order-action:hover:not(:disabled) { background: var(--interaction-accent); color: var(--surface); }
 
 .order-action:disabled {
   border: 0;
