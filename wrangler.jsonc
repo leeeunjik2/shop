@@ -5,6 +5,9 @@
   "vars": {
     "TOSS_CLIENT_KEY": "test_gck_docs_Ovk5rk1EwkEbP0W43n07xlzm"
   },
+  "ai": {
+    "binding": "AI"
+  },
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",
