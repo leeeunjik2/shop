@@ -757,6 +757,10 @@ body { color:var(--inu-ink); background:#fff; font-size:15px; }
 .catalog-header .category-link:hover, .catalog-header .category-link:focus-visible { color:#FFFFFF !important; background:#0056D6 !important; }
 .catalog-header .category-strip a { display:flex; align-items:center; justify-content:center; color:#fff !important; font-size:16px !important; font-weight:500; }
 .cart-total { margin:24px 0; color:#002F6A; font-size:20px; font-weight:700; }
+.english-action { margin:22px 0 10px; padding:10px 18px; border:1px solid #002F6A; border-radius:4px; background:#fff; color:#002F6A; font-size:14px; font-weight:700; cursor:pointer; }
+.english-action:hover, .english-action:focus-visible { background:#EAF2FF; }
+.english-action:disabled { opacity:.6; cursor:wait; }
+.english-result { max-width:520px; min-height:24px; color:#64748B; font-size:15px; line-height:1.7; }
 .payment-box { margin-top:32px; max-width:640px; }
 .payment-box #payment-method, .payment-box #payment-agreement { margin-bottom:18px; }
 .payment-box .order-action { margin-top:16px; min-width:220px; }
