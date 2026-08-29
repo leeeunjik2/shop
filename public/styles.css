@@ -609,6 +609,14 @@ p {
   font-size: 16px;
 }
 
+.auth-main { width: 480px; margin: 0 auto; padding-top: 55px; }
+.auth-form { display: grid; gap: 16px; margin-top: 28px; }
+.auth-form label { display: grid; gap: 7px; color: var(--secondary-text); font-size: 14px; }
+.auth-form input { height: 44px; padding: 0 12px; border: 1px solid var(--control-border); border-radius: 0; background: var(--surface); }
+.auth-form .outline-action { width: 100%; height: 45px; margin-top: 8px; }
+.account-card { display: grid; gap: 12px; margin-top: 28px; padding: 28px; border: 1px solid var(--structure-border); }
+.account-card .outline-action { width: 100%; }
+
 .commerce-shell > .page-state {
   width: 1175px;
   padding-top: 34px;
