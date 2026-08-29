@@ -755,3 +755,5 @@ body { color:var(--inu-ink); background:#fff; font-size:15px; }
 .catalog-header .category-strip { z-index: 20; display:grid; visibility:visible; opacity:1; background:#002F6A !important; }
 .catalog-header .category-link { display:flex; align-items:center; justify-content:center; color:#FFFFFF !important; background:#002F6A !important; font-size:16px !important; font-weight:500; }
 .catalog-header .category-link:hover, .catalog-header .category-link:focus-visible { color:#FFFFFF !important; background:#0056D6 !important; }
+.catalog-header .category-strip a { display:flex; align-items:center; justify-content:center; color:#fff !important; font-size:16px !important; font-weight:500; }
+.cart-total { margin:24px 0; color:#002F6A; font-size:20px; font-weight:700; }
