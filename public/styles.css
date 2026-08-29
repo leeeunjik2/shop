@@ -97,8 +97,6 @@ p {
 .top-nav a { padding:0 14px; color:var(--primary-text); font-size:14px; font-weight:700; }
 .top-nav a:hover { color:var(--interaction-accent); }
 
-.catalog-header::before,
-.commerce-header::before { content: "INU  인천대학교 쇼핑몰"; position: absolute; left: 48px; top: 25px; color: var(--interaction-accent); font-size: 20px; font-weight: 700; letter-spacing: normal; }
 .catalog-header, .commerce-header { position: relative; }
 .commerce-page::after { content: "인천대학교 쇼핑몰  ·  (22012) 인천광역시 연수구 아카데미로 119  ·  대표전화 032-835-8114  ·  www.inu.ac.kr"; display: block; width: 100%; padding: 28px 50px; border-top: 1px solid var(--structure-border); background: var(--page-background); color: var(--secondary-text); font-size: 12px; }
 .catalog-main::after { content: "인천대학교 쇼핑몰  ·  인천광역시 연수구 아카데미로 119  ·  www.inu.ac.kr"; display: block; margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--structure-border); color: var(--secondary-text); font-size: 12px; }
