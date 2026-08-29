@@ -671,3 +671,12 @@ noscript {
 .is-busy {
   pointer-events: none;
 }
+.catalog-header { border-bottom: 2px solid var(--interaction-accent); }
+.brand-link { letter-spacing: .02em; }
+.top-nav { gap: 4px; }
+.top-nav a { min-width: 84px; text-align: center; }
+.category-strip { border-top: 1px solid var(--structure-border); }
+.product-card__image { border: 1px solid var(--structure-border); }
+.product-card__link:hover .product-card__image { border-color: var(--interaction-accent); }
+.order-row { transition: background-color 120ms ease; }
+.order-row:hover { background: var(--control-strip-surface); }
