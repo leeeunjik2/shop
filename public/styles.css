@@ -680,3 +680,51 @@ noscript {
 .product-card__link:hover .product-card__image { border-color: var(--interaction-accent); }
 .order-row { transition: background-color 120ms ease; }
 .order-row:hover { background: var(--control-strip-surface); }
+
+/* Refined INU storefront layer */
+:root { --inu-navy:#102A56; --inu-blue:#1B5CC8; --inu-sky:#EAF2FF; --inu-ink:#182230; --inu-muted:#64748B; --inu-line:#D9E2EF; --inu-soft:#F5F8FC; }
+body { color:var(--inu-ink); background:#fff; font-size:15px; }
+.catalog-header { height:128px; background:#fff; border-bottom:1px solid var(--inu-line); box-shadow:0 2px 10px rgba(16,42,86,.06); }
+.brand-link { left:48px; top:25px; color:var(--inu-navy); font-size:23px; letter-spacing:-.04em; }
+.brand-link::first-letter { color:var(--inu-blue); }
+.top-nav { height:70px; padding-right:42px; gap:2px; }
+.top-nav a { min-width:auto; padding:0 16px; color:var(--inu-muted); font-size:14px; font-weight:700; }
+.top-nav a:hover { color:var(--inu-blue); }
+.category-strip { height:42px; background:var(--inu-navy); border:0; }
+.category-link { color:#DCE8FA; font-size:14px; }
+.category-link:hover, .category-link[aria-current=true] { color:#fff; background:var(--inu-blue); }
+.category-link + .category-link::before { background:rgba(255,255,255,.18); top:12px; height:18px; }
+.catalog-main { padding-top:46px; }
+.catalog-title { color:var(--inu-navy); font-size:30px; letter-spacing:-.06em; }
+.product-grid { margin-top:30px; row-gap:46px; }
+.product-card__link { width:196px; }
+.product-card__image { width:196px; height:196px; border:1px solid var(--inu-line); background:var(--inu-soft); transition:transform .2s ease, border-color .2s ease; }
+.product-card__link:hover .product-card__image { transform:translateY(-4px); border-color:var(--inu-blue); }
+.product-card__name { margin-top:15px; color:var(--inu-ink); font-size:15px; font-weight:500; }
+.product-card__price { margin-top:8px; color:var(--inu-navy); font-size:18px; }
+.detail-main { padding-top:54px; }
+.detail-image { border:1px solid var(--inu-line); background:var(--inu-soft); }
+.detail-category { color:var(--inu-blue); font-weight:700; }
+.detail-title { color:var(--inu-navy); font-size:28px; font-weight:700; letter-spacing:-.05em; }
+.detail-description { color:var(--inu-muted); line-height:1.8; }
+.detail-price { color:var(--inu-navy); font-size:28px; }
+.detail-divider { background:var(--inu-line); }
+.outline-action, .order-action { border:0; border-radius:4px; background:var(--inu-blue); color:#fff; transition:background .15s ease, transform .15s ease; }
+.outline-action:hover, .order-action:hover:not(:disabled) { background:var(--inu-navy); color:#fff; transform:translateY(-1px); }
+.commerce-page { background:var(--inu-soft); }
+.commerce-header { background:#fff; border-bottom:1px solid var(--inu-line); }
+.commerce-shell { background:#fff; border-left:1px solid var(--inu-line); border-right:1px solid var(--inu-line); }
+.commerce-title { color:var(--inu-navy); letter-spacing:-.06em; }
+.summary-card { border:1px solid var(--inu-line); border-radius:6px; box-shadow:0 8px 24px rgba(16,42,86,.08); }
+.line-list { border:1px solid var(--inu-line); border-radius:6px; }
+.line-item + .line-item { border-top-color:var(--inu-soft); }
+.order-row { grid-template-columns:130px minmax(240px,1fr) 110px 150px; min-height:74px; border-bottom:1px solid var(--inu-line); }
+.order-row:hover { background:var(--inu-sky); }
+.auth-main { padding-top:64px; }
+.auth-main > h1 { color:var(--inu-navy); font-size:30px; }
+.auth-form input { height:48px; border-color:var(--inu-line); border-radius:4px; background:#fff; }
+.auth-form input:focus { border-color:var(--inu-blue); outline:0; box-shadow:0 0 0 3px rgba(27,92,200,.14); }
+.member-card { border-color:var(--inu-line); border-radius:6px; box-shadow:0 8px 24px rgba(16,42,86,.06); }
+.member-card h2 { color:var(--inu-navy); }
+.commerce-page::after, .catalog-main::after { color:var(--inu-muted); background:var(--inu-navy); border:0; }
+@media (max-width:1100px) { .brand-link { left:24px; } .top-nav { padding-right:12px; } }
