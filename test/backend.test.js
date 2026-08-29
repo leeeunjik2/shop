@@ -307,6 +307,12 @@ test("order creation snapshots prices, empties the cart in one batch, and protec
   assert.equal(created.payload.order.total, 2 * 89000 + 3 * 42000);
   assert.deepEqual(env.DB.batchCallSizes, [3]);
 
+  const ownOrders = await callApi(env, "/api/orders", { cookie: cookieA });
+  assert.equal(ownOrders.response.status, 200);
+  assert.equal(ownOrders.payload.orders.length, 1);
+  const otherOrders = await callApi(env, "/api/orders", { cookie: cookieB });
+  assert.deepEqual(otherOrders.payload.orders, []);
+
   const cartAfterOrder = await callApi(env, "/api/cart", { cookie: cookieA });
   assert.deepEqual(cartAfterOrder.payload, { items: [], total: 0 });
 

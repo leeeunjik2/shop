@@ -588,6 +588,10 @@ p {
   font-size: 16px;
 }
 
+.order-list { min-height: 120px; }
+.order-row { display: grid; grid-template-columns: 1fr 160px 100px; gap: 15px; align-items: center; min-height: 60px; padding: 0 25px; border-bottom: 1px solid var(--list-border); color: var(--primary-text); }
+.order-row strong { text-align: right; }
+
 .page-state {
   width: 900px;
   margin: 0 auto;
